@@ -2,18 +2,61 @@ const monthTitle = "January 2026";
 
 const results = [
   {
-    team: "Maggie & Joel",
-    score: 42,
+    team: "Mike & Linda",
+    score: 22,
     submissions: [
-      "assets/results/dec25/mnjcereal.jpeg",
-      "assets/results/dec25/mnjfaces.jpeg"
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
     ]
   },
   {
-    team: "Vulich Family",
-    score: 38,
-    submissions: []
-  }
+    team: "Ann & Peggy",
+    score: 32,
+    submissions: [
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
+    ]
+  },
+  {
+    team: "Matt & Cheese",
+    score: 33,
+    submissions: [
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
+    ]
+  },
+  {
+    team: "Jackie & Sofie",
+    score: 21,
+    submissions: [
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
+    ]
+  },
+  {
+    team: "Amy & Adam",
+    score: 25,
+    submissions: [
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
+    ]
+  },
+  {
+    team: "Matt & Lizzie",
+    score: 29,
+    submissions: [
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
+    ]
+  },
+  {
+    team: "Will & Jordan",
+    score: 23,
+    submissions: [
+      "assets/results/jan26/.jpeg",
+      "assets/results/jan26/.jpeg"
+    ]
+  },
 ];
 
 // run template
