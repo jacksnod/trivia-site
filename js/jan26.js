@@ -5,56 +5,72 @@ const results = [
     team: "Mike & Linda",
     score: 22,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/mlsicons.jpeg",
+      "assets/results/jan26/mlsbrands.jpeg"
     ]
   },
   {
     team: "Ann & Peggy",
     score: 32,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/apicons.jpeg",
+      "assets/results/jan26/apbrands.jpeg"
     ]
   },
   {
     team: "Matt & Cheese",
     score: 33,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/maicons.jpeg",
+      "assets/results/jan26/mabrands.jpeg"
     ]
   },
   {
     team: "Jackie & Sofie",
     score: 21,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/jsicons.jpeg",
+      "assets/results/jan26/jsbrands.jpeg"
     ]
   },
   {
     team: "Amy & Adam",
     score: 25,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/aaicons.jpeg",
+      "assets/results/jan26/aabrands.jpeg"
     ]
   },
   {
     team: "Matt & Lizzie",
     score: 29,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/mlicons.jpeg",
+      "assets/results/jan26/mlbrands.jpeg"
     ]
   },
   {
     team: "Will & Jordan",
     score: 23,
     submissions: [
-      "assets/results/jan26/.jpeg",
-      "assets/results/jan26/.jpeg"
+      "assets/results/jan26/wjicons.jpeg",
+      "assets/results/jan26/wjbrands.jpeg"
+    ]
+  },
+  {
+    team: "Rob & Sarah",
+    score: 23,
+    submissions: [
+      "assets/results/jan26/rsicons.jpeg",
+      "assets/results/jan26/rsbrands.jpeg"
+    ]
+  },
+  {
+    team: "Dave & Kathie",
+    score: 12,
+    submissions: [
+      "assets/results/jan26/dkicons.jpeg",
+      "assets/results/jan26/dkbrands.jpeg"
     ]
   },
 ];
