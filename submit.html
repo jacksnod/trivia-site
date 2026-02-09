@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Trivia Answers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-emerald-700 text-white w-full py-3 shadow-md">
+    <h1 class="flex justify-center">
+      <a href="index.html">
+        <img src="assets/logos/Logo.png" alt="Snod Trivia" class="h-14 w-auto">
+      </a>
+    </h1>
+  </header>
+
+  <!-- Back link -->
+  <div class="w-full max-w-xl mx-auto mt-4 px-4">
+    <a href="index.html" class="text-emerald-700 hover:text-emerald-900 font-medium">
+      ← Back to Home
+    </a>
+  </div>
+
+  <!-- Main -->
+  <main class="flex-grow w-full max-w-xl mx-auto mt-6 px-4">
+    <section class="bg-white p-6 rounded-xl shadow-md">
+
+      <h2 class="text-xl font-semibold text-emerald-600 mb-2">
+        Submit Your Trivia Answers
+      </h2>
+
+      <p class="text-gray-700 mb-6">
+        Upload photos of your completed trivia sheets here.
+      </p>
+
+      <form
+        name="trivia-submission"
+        method="POST"
+        data-netlify="true"
+        enctype="multipart/form-data"
+        action="/thanks.html"
+        netlify-honeypot="bot-field"
+        class="space-y-5"
+      >
+
+      <input type="hidden" name="form-name" value="trivia-submission">
+        <p class="hidden">
+            <label>
+                Don’t fill this out if you’re human:
+            <input name="bot-field">
+            </label>
+        </p>
+
+        <!-- Netlify hidden input -->
+        <input type="hidden" name="form-name" value="trivia-submission">
+
+        <!-- Hidden month tag -->
+        <input type="hidden" name="round" value="January 2026">
+
+        <!-- Team name -->
+        <div>
+          <label class="block font-medium mb-1">
+            Team Name <span class="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            name="team"
+            required
+            class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-emerald-200"
+            placeholder="e.g. Jack & Jackie"
+          >
+        </div>
+
+        <!-- Email (optional) -->
+        <!-- <div>
+          <label class="block font-medium mb-1">
+            Contact Email (optional)
+          </label>
+          <input
+            type="email"
+            name="email"
+            class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-emerald-200"
+            placeholder="you@example.com"
+          >
+        </div> -->
+
+        <!-- File upload -->
+        <div>
+          <label class="block font-medium mb-1">
+            Upload Answer Photos <span class="text-red-500">*</span>
+          </label>
+          <input
+            type="file"
+            name="photos"
+            required
+            multiple
+            accept="image/jpeg,image/png"
+            class="w-full"
+          >
+          <p class="text-sm text-gray-500 mt-1">
+            Please upload both sheets.
+          </p>
+        </div>
+
+        <!-- Notes -->
+        <div>
+          <label class="block font-medium mb-1">
+            Notes (optional)
+          </label>
+          <textarea
+            name="notes"
+            rows="3"
+            class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-emerald-200"
+            placeholder="Anything we should know?"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg transition"
+        >
+          Submit Answers
+        </button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-emerald-700 text-white text-center py-3 mt-8">
+    <p class="text-sm">© 2026 Snod Trivia</p>
+  </footer>
+
+</body>
+</html>

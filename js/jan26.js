@@ -73,6 +73,14 @@ const results = [
       "assets/results/jan26/dkbrands.jpeg"
     ]
   },
+  {
+    team: "Connor & Indre",
+    score: 28,
+    submissions: [
+      "assets/results/jan26/cniicons.jpg",
+      "assets/results/jan26/cnibrands.jpg"
+    ]
+  },
 ];
 
 // run template
