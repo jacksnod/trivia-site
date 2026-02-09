@@ -91,18 +91,33 @@
         <!-- File upload -->
         <div>
           <label class="block font-medium mb-1">
-            Upload Answer Photos <span class="text-red-500">*</span>
+            Upload Answer Sheet 1 <span class="text-red-500">*</span>
           </label>
           <input
             type="file"
-            name="photos"
+            name="photo 1"
             required
-            multiple
-            accept="image/jpeg,image/png"
+            accept="image/jpeg,image/png,image/jpg"
             class="w-full"
           >
           <p class="text-sm text-gray-500 mt-1">
-            Please upload both sheets.
+            Please upload one sheet.
+          </p>
+        </div>
+
+        <div>
+          <label class="block font-medium mb-1">
+            Upload Answer Sheet 2 <span class="text-red-500">*</span>
+          </label>
+          <input
+            type="file"
+            name="photo 2"
+            required
+            accept="image/jpeg,image/png,image/jpg"
+            class="w-full"
+          >
+          <p class="text-sm text-gray-500 mt-1">
+            Please upload one sheet.
           </p>
         </div>
 
