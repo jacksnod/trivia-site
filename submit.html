@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Submit Trivia Answers</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col">
@@ -134,12 +135,60 @@
         <!-- Submit -->
         <button
           type="submit"
+          id="submit-btn"
           class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg transition"
         >
           Submit Answers
         </button>
 
       </form>
+
+      <script>
+        const form = document.querySelector('form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Compressing images...';
+
+          const options = {
+            maxSizeMB: 1,
+            maxWidthOrHeight: 1920,
+            useWebWorker: true
+          };
+
+          try {
+            const formData = new FormData(form);
+
+            for (const name of ['sheet1', 'sheet2']) {
+              const file = form.querySelector(`[name="${name}"]`).files[0];
+              if (file) {
+                const compressed = await imageCompression(file, options);
+                formData.set(name, compressed, file.name);
+              }
+            }
+
+            submitBtn.textContent = 'Submitting...';
+
+            const response = await fetch('/', {
+              method: 'POST',
+              body: formData
+            });
+
+            if (response.ok) {
+              window.location.href = '/thanks.html';
+            } else {
+              throw new Error('Submission failed');
+            }
+          } catch (err) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Answers';
+            alert('Something went wrong. Please try again.');
+          }
+        });
+      </script>
 
     </section>
   </main>
