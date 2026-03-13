@@ -105,6 +105,13 @@ const results = [
       "assets/results/feb26/mmplates.jpeg"
     ]
   },
+  {
+    team: "Will & Rick",
+    score: 17,
+    submissions: [
+     
+    ]
+  },
 ];
 
 // run template
