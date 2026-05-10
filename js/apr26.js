@@ -42,9 +42,9 @@ const results = [
   },
   {
     team: "Matt & Lizzie",
-    score: 0,
+    score: 26,
     submissions: [
-  
+      "assets/results/apr26/mnlboth.jpeg",
     ]
   },
   {
