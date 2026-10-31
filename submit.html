@@ -56,8 +56,9 @@
             </label>
         </p>
 
-        <!-- Hidden month tag -->
-        <input type="hidden" name="round" value="January 2026">
+        <!-- Hidden month tag. Filled in automatically from the current round
+             on the home page (see the script below), so it never needs editing. -->
+        <input type="hidden" name="round" value="">
 
         <!-- Team name -->
         <div>
@@ -146,6 +147,34 @@
       <script>
         const form = document.querySelector('form');
         const submitBtn = document.getElementById('submit-btn');
+        const roundInput = form.querySelector('[name="round"]');
+
+        // Work out which round this submission is for. The home page shows the
+        // current round's question images from assets/questions/<mon><yy>/
+        // (e.g. oct26), so we read that folder name and turn it into
+        // "October 2026". If that fails, fall back to this month's name.
+        const MONTHS = {
+          jan: 'January', feb: 'February', mar: 'March', apr: 'April',
+          may: 'May', jun: 'June', jul: 'July', aug: 'August',
+          sep: 'September', oct: 'October', nov: 'November', dec: 'December'
+        };
+
+        function fallbackRound() {
+          return new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' });
+        }
+
+        const roundReady = fetch('index.html', { cache: 'no-store' })
+          .then(res => res.ok ? res.text() : '')
+          .then(html => {
+            const match = html.match(/assets\/questions\/([a-z]{3})(\d{2})\//i);
+            const month = match && MONTHS[match[1].toLowerCase()];
+            return month ? `${month} 20${match[2]}` : fallbackRound();
+          })
+          .catch(fallbackRound)
+          .then(round => {
+            roundInput.value = round;
+            return round;
+          });
 
         form.addEventListener('submit', async function (e) {
           e.preventDefault();
@@ -160,6 +189,7 @@
           };
 
           try {
+            await roundReady;
             const formData = new FormData(form);
 
             for (const name of ['sheet1', 'sheet2']) {
