@@ -3,7 +3,7 @@ const monthTitle = "June 2026";
 // Scores only for now. Graded sheet images go in assets/results/jun26/ and get
 // listed under each team's submissions once Jack gives the go-ahead.
 const results = [
-  { team: "Mollie", score: 21, submissions: [] },
+  { team: "Mollie (with the help of strangers)", score: 21, submissions: [] },
   { team: "Indrė & Connor", score: 18, submissions: [] },
   { team: "Ann & Peggy", score: 18, submissions: [] },
   { team: "Amy & Adam", score: 18, submissions: [] },
