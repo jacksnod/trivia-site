@@ -1,18 +1,20 @@
 const monthTitle = "June 2026";
 
-// Scores only for now. Graded sheet images go in assets/results/jun26/ and get
-// listed under each team's submissions once Jack gives the go-ahead.
-const results = [
-  { team: "Mollie with the help of strangers", score: 21, submissions: [] },
-  { team: "Indrė & Connor", score: 18, submissions: [] },
-  { team: "Ann & Peggy", score: 18, submissions: [] },
-  { team: "Amy & Adam", score: 18, submissions: [] },
-  { team: "Jordan & Will", score: 17, submissions: [] },
-  { team: "Sam & Hannah", score: 16, submissions: [] },
-  { team: "Matt & Cheese", score: 16, submissions: [] },
-  { team: "Jackie & Sofie", score: 12, submissions: [] },
-  { team: "Maggie", score: 9, submissions: [] }
+const sheets = code => [
+  `assets/results/jun26/${code}beards.jpg`,
+  `assets/results/jun26/${code}tvsets.jpg`
 ];
 
-// Only the standings are shown until the sheets are posted.
-renderStandings(addPlaces(sortResults(results)));
+const results = [
+  { team: "Mollie with the help of strangers", score: 21, submissions: sheets("mo") },
+  { team: "Indrė & Connor", score: 18, submissions: sheets("ic") },
+  { team: "Ann & Peggy", score: 18, submissions: sheets("ap") },
+  { team: "Amy & Adam", score: 18, submissions: sheets("aa") },
+  { team: "Jordan & Will", score: 17, submissions: sheets("jw") },
+  { team: "Sam & Hannah", score: 16, submissions: sheets("sh") },
+  { team: "Matt & Cheese", score: 16, submissions: sheets("mc") },
+  { team: "Jackie & Sofie", score: 12, submissions: sheets("js") },
+  { team: "Maggie", score: 9, submissions: sheets("mg") }
+];
+
+renderMonth(results);

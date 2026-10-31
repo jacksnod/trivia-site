@@ -28,15 +28,40 @@
     <h2 class="text-xl font-semibold text-emerald-600 mb-4">🏆 June 2026 — Scores</h2>
 
     <p class="text-gray-700 mb-4">
-      Final scores for the June round (Name that Beard and TV Sets, 21 points total). Answers and graded team sheets are coming soon.
+      Below are the answers, final rankings, and each team's graded sheets. Every sheet shows its score in the corner, with a ✓ or ✗ for each answer and the correct answer underneath.
     </p>
+
+    <!-- Answer Images -->
+    <details class="border rounded-lg mb-4">
+      <summary class="cursor-pointer px-4 py-2 bg-blue-50 hover:bg-blue-100 font-medium">
+        Name that Beard — Answers
+      </summary>
+      <div class="p-4 flex justify-center">
+        <img src="assets/answers/jun26/beards.jpg"
+             class="w-full max-w-md rounded-lg shadow-md">
+      </div>
+    </details>
+
+    <details class="border rounded-lg mb-4">
+      <summary class="cursor-pointer px-4 py-2 bg-blue-50 hover:bg-blue-100 font-medium">
+        TV Sets — Answers
+      </summary>
+      <div class="p-4 flex justify-center">
+        <img src="assets/answers/jun26/tvsets.jpg"
+             class="w-full max-w-md rounded-lg shadow-md">
+      </div>
+    </details>
 
     <!-- Standings -->
     <div class="mt-6">
-      <h3 class="text-lg font-semibold mb-3">Standings</h3>
+      <h3 class="text-lg font-semibold mb-3">Final Standings</h3>
 
       <div id="standings" class="space-y-2"></div>
     </div>
+
+    <!-- Submissions -->
+    <h3 class="text-lg font-semibold mt-8 mb-4">Team Submissions</h3>
+    <div id="submissions"></div>
 
 </section>
 
