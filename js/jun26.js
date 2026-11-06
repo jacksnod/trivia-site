@@ -13,8 +13,11 @@ const results = [
   { team: "Jordan & Will", score: 17, submissions: sheets("jw") },
   { team: "Sam & Hannah", score: 16, submissions: sheets("sh") },
   { team: "Matt & Cheese", score: 16, submissions: sheets("mc") },
+  { team: "Mike & Linda", score: 15, submissions: sheets("ml") },
   { team: "Jackie & Sofie", score: 12, submissions: sheets("js") },
-  { team: "Maggie", score: 9, submissions: sheets("mg") }
+  { team: "Dave & Kathie", score: 11, submissions: sheets("dk") },
+  { team: "Maggie", score: 9, submissions: sheets("mg") },
+  { team: "Dave", score: 7, submissions: sheets("dv") }
 ];
 
 renderMonth(results);
